@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Javier Hidalgo">
+  <meta name="keywords" content="weather, app, javier, javi, hidalgo, dev">
+  <meta name="description" content="Una sencilla aplicación para consultar el tiempo de tu ciudad.">
+
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="shortcut icon" href="../public/images/favicon.png" type="image/x-icon">
+
+  <title>API Weather</title>
+</head>
+<body class="font-sans bg-[#121212] h-screen flex flex-col gap-8 justify-center items-center">
+  <div>
+    <h1 class="text-5xl font-bold text-white">API Weather</h1>
+  </div>
+  <div class="container bg-[#fff] max-w-[400px] p-[20px] flex flex-col justify-center items-center box-border rounded-[20px]">
+    <div class="search-box w-full flex gap-4 justify-between items-center">
+      <i class="fa-solid fa-location-dot text-2xl"></i>
+      <form class="flex items-center gap-2 grow">
+        <input class="min-w-[100px] p-[10px] grow" type="text" placeholder="Madrid, Barcelona, Valencia..."  />
+        <button class="search-btn w-[44px] p-[10px] bg-[#ebebeb] rounded-[50%] hover:bg-[#121212] hover:text-[#fff] transition-all">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    
+    <div class="error hidden mt-4 font-semibold text-red-600">
+      <span>Este campo no puede estar vacío</span>
+    </div>
+
+    <div class="not-found hidden flex-col items-center my-[30px]">
+      <img class="max-w-full" src="../public/images/404-error.jpg" alt="Not found!" />
+      <p class="text-center">¡Lo siento! No se encuentra la localización indicada</p>
+    </div>
+
+    <div class="weather-container w-full hidden mt-4 flex-col items-center font-semibold scale-0 opacity-0">
+        <div class="flex flex-col gap-4 items-center">
+          <h1 class="city text-3xl"></h1>
+          <img class="img-description max-w-[200px]" src="" alt="">
+          <span class="temperature text-2xl"></span>
+          <span class="weather-description capitalize"></span>
+        </div>
+        <div class="weather-details w-full justify-evenly flex mt-7">
+          <div class="humidity flex gap-4 items-center">
+            <i class="fa-solid fa-water text-2xl"></i>
+            <div class="h-details">
+              <p class="percent"></p>
+              <p class="text-xs font-normal">Humidity</p>
+            </div>
+          </div>
+          <div class="wind flex gap-4 items-center">
+            <i class="fa-solid fa-wind text-2xl"></i>
+            <div class="w-details">
+              <p class="kmh"></p>
+              <p class="text-xs font-normal">Wind Speed</p>
+            </div>
+          </div>
+        </div>
+        <div class="more-details-container flex flex-col items-center mt-7">
+          <button class="more-details-btn w-fit px-4 py-2 rounded-3xl hover:bg-[#ebebeb] transition-all">More details <i class="fa-solid fa-circle-chevron-down"></i></button>
+          <div class="more-details-modal hidden flex-col gap-6 p-[20px]">
+            <div class="temp flex flex-col text-center gap-3">
+              <span class="temp-min"></span>
+              <span class="temp-max"></span>
+              <span class="temp-feel"></span>
+            </div>
+            <div class="suntime flex justify-center gap-4">
+              <div class="flex gap-4 items-center">
+                <img class="w-[25px]" src="../public/images/sunrise.png" alt="">
+                <span class="sunrise"></span>
+              </div>
+              <div class="flex gap-4 items-center">
+                <img class="w-[25px]" src="../public/images/sunset.png" alt="">
+                <span class="sunset"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <footer class="flex flex-col items-center gap-3">
+    <p class="text-white">Developed by
+      <a class="font-medium hover:text-yellow-500" href="https://javihidalgodev.github.io/portfolio.github.io/">Javier Hidalgo</a>
+    </p>
+    <div class="social flex gap-4 text-white text-xl">
+      <i class="fa-brands fa-linkedin "></i>
+      <i class="fa-brands fa-github "></i>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/7c8801c017.js"></script>
+  <script src="./js/code.js" type="text/javascript"></script>
+</body>
+</html>

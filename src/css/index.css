@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.social > *:hover, a:hover {
+  color: rgb(234,179,8);
+}
