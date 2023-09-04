@@ -44,27 +44,27 @@ searchBtn.addEventListener('click', async (e) => {
       city.textContent = data.name;
       switch (data.weather[0].main) {
         case 'Clear':
-          imgDescription.src = '../public/images/sun.png'
+          imgDescription.src = './public/images/sun.png'
           imgDescription.alt = 'soleado'
           break;
           
         case 'Rain':
-          imgDescription.src = '../public/images/rain.png'
+          imgDescription.src = './public/images/rain.png'
           imgDescription.alt = 'lluvioso'
           break;
             
         case 'Thunderstorm':
-          imgDescription.src = '../public/images/storm.png'
+          imgDescription.src = './public/images/storm.png'
           imgDescription.alt = 'tormentoso'
           break;
             
         case 'Snow':
-          imgDescription.src = '../public/images/snow.png'
+          imgDescription.src = './public/images/snow.png'
           imgDescription.alt = 'nieve'
           break;
           
         case 'Clouds':
-          imgDescription.src = '../public/images/clouds.png'
+          imgDescription.src = './public/images/clouds.png'
           imgDescription.alt = 'nuboso'
           break;
           
